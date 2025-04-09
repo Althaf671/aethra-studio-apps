@@ -1,6 +1,17 @@
-import express from express;
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+
+dotenv.config(); // Read .env file
+
 const app = express();
+
+app.use(cors());
+app.use(express.json());
+
 app.get("/", (req, res) => {
     res.send("Backend is working!");
     });
-app.listen(3000, () => console.log("server is running at port 3000"));
+    
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server is running at port ${PORT}`));
