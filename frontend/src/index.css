@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+/* Background */
+.app-bg {
+  background: linear-gradient(to bottom, #010101, #312E2E, #010101);
+}
+
+.spinner-bg {
+  background: #141313;
+}
+
+.loading-bg {
+  border-top: 5px solid #3c3633;
+  border-radius: 100%;
+}
