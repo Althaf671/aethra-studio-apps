@@ -76,3 +76,12 @@ html {
   box-shadow: 0 6px 20px rgba(0,0,0,0.2);
   background-color: #FFFFFF;
 }
+
+
+
+/* Buttons */
+.play-button:hover {
+  background: #FF0000;
+  transition: all ease-in 0.3s;
+  color:white;
+}

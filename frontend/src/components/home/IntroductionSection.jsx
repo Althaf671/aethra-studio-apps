@@ -1,5 +1,5 @@
-import React, { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import React, { useRef, useState } from 'react'
+import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
 
@@ -14,39 +14,48 @@ const profileTeam = [
     name: 'Sirhan',
     position: 'Content Creator',
     avatar: 'homeAssets/introduction/avatar4.png',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod tincidunt eros, ac vehicula magna feugiat at.',
+    description: 'Lorem ipsum dolor sit amet...',
     id: '1',
-    image: 'homeAssets/developer.jpg'
+    link: 'misc/AethraLogo.jpeg',
+    videoId: 'CN_MZpHkkgc' 
   },
   {
     name: 'Althaf',
     position: 'Fullstack Developer',
     avatar: 'homeAssets/introduction/avatar1.png',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod tincidunt eros, ac vehicula magna feugiat at.',
+    description: 'Lorem ipsum dolor sit amet...',
     id: '2',
-    image: 'homeAssets/developer.jpg'
+    link: 'misc/AethraLogo.jpeg',
+    videoId: 'CN_MZpHkkgc'
   },
   {
     name: 'Asti',
     position: 'Graphic Designer',
     avatar: 'homeAssets/introduction/avatar2.png',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod tincidunt eros, ac vehicula magna feugiat at.',
-    id: '3',
-    image: 'homeAssets/developer.jpg'
+    description: 'Lorem ipsum dolor sit amet...',
+    id: '2',
+    link: 'misc/AethraLogo.jpeg',
+    videoId: 'CN_MZpHkkgc'
   },
   {
     name: 'Kaisyi',
-    position: 'Photograper',
+    position: 'Photographer',
     avatar: 'homeAssets/introduction/avatar3.png',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod tincidunt eros, ac vehicula magna feugiat at.',
-    id: '4',
-    image: 'homeAssets/developer.jpg'
+    description: 'Lorem ipsum dolor sit amet...',
+    id: '2',
+    link: 'misc/AethraLogo.jpeg',
+    videoId: 'CN_MZpHkkgc'
   },
+  
+
 ]
 
 const IntroductionSection = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
+
+  const [isOpen, setIsOpen] = useState(false)
+  const [currentVideo, setCurrentVideo] = useState(null)
 
   return (
     <div className='container p-4 pt-10 md:p-6 lg:p-10'>
@@ -72,27 +81,39 @@ const IntroductionSection = () => {
         spaceBetween={20}
         speed={1500}
         loop={true}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 5000 }}
         pagination={{ clickable: true, el: '.custom-pagination' }}
       >
         {profileTeam.map((member) => (
           <SwiperSlide key={member.id} className='max-w-[350px]'>
             <div className='flex w-full rounded-2xl border border-white h-[200px]'>
-              <img
-                src={getImage(member.image)}
-                className='w-[70%] h-full object-cover rounded-tl-2xl rounded-bl-2xl'
-                alt='intro'
-              />
-              <div className='flex flex-col items-center justify-center p-1.5 w-[30%]'>
+              
+              <div className="w-[67%] h-full relative">
+                <img
+                  src={getImage(member.link)}
+                  className='w-full h-full object-fit rounded-tl-2xl rounded-bl-2xl'
+                  alt='intro'
+                />
+                <button
+                  onClick={() => {
+                    setIsOpen(true)
+                    setCurrentVideo(member.videoId)
+                  }}
+                  className='play-button absolute bottom-2 left-2 py-1 px-2 bg-white rounded-full text-black text-12px cursor-pointer'>
+                  Watch Video
+                </button>
+              </div>
+
+              <div className='flex flex-col items-center justify-center p-1.5 w-[33%]'>
                 <img
                   src={getImage(member.avatar)}
                   className='w-10 h-10 object-cover rounded-full mb-2'
                   alt={`profile-image-${member.id}`}
                 />
                 <div className='text-white text-center'>
-                <h3 className='text-sm font-bold'>{member.name}</h3>
-                <p className='text-10px'>{member.position}</p>
-                <p className='text-8px'>{member.description}</p>
+                  <h3 className='text-sm font-bold'>{member.name}</h3>
+                  <p className='text-10px'>{member.position}</p>
+                  <p className='text-8px'>{member.description}</p>
                 </div>
               </div>
             </div>
@@ -102,6 +123,35 @@ const IntroductionSection = () => {
 
       {/* Custom pagination dots */}
       <div className="custom-pagination mt-4 flex justify-center gap-2" />
+
+      {/* Modal/to show popup of the video */}
+      <AnimatePresence>
+        {/* To make smooth popup */}
+        {isOpen && (
+          <motion.div 
+            className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50"
+            initial={{ opacity: 0 }} 
+            animate={{ opacity: 1 }} 
+            exit={{ opacity: 0 }}
+          >
+            {/* The video popup */}
+            <div className="relative w-full max-w-3xl aspect-video bg-black rounded-2xl mx-2 overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src={`https://www.youtube.com/embed/${currentVideo}?autoplay=1`}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+
+             {/* Exit video button */}
+              <button onClick={() => setIsOpen(false)} className="absolute top-2 right-2 text-white text-2xl cursor-pointer">
+                ✕
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

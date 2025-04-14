@@ -23,7 +23,7 @@ const TopSection = () => {
                 // To reset the card animation if the user didn't did the second tap, i set the timeout for 1 second
                 setTimeout(() => {
                     setIsTapped(false)
-                }, 1500);
+                }, 500);
         }
     }
 
