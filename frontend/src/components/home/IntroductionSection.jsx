@@ -38,7 +38,7 @@ const profileTeam = [
     videoId: 'CN_MZpHkkgc'
   },
   {
-    name: 'Kaisyi',
+    name: 'Kaysi',
     position: 'Photographer',
     avatar: 'homeAssets/introduction/avatar3.png',
     description: 'Lorem ipsum dolor sit amet...',
@@ -152,6 +152,7 @@ const IntroductionSection = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
     </div>
   )
 }

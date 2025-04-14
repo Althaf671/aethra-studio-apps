@@ -3,17 +3,19 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { NavbarProvider } from './context/useNavbarContext';
 import PageContent from './components/misc/PageContent';
 import FooterLayout from './layouts/FooterLayout';
+import ConsuleButton from './components/misc/ConsuleButton';
 
 const App = () => {
   return (
-    <div className='app-bg min-h-max w-screen'>
+    <div className='app-bg relative min-h-max w-screen'>
       <Router>
         <NavbarProvider>
           <PageContent />
+          <ConsuleButton />
           <FooterLayout />
         </NavbarProvider>
       </Router>
-    </div>
+    </div> 
   );
 };
 

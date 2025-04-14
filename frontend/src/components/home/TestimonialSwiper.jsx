@@ -66,7 +66,7 @@ const TestimonialSwiper = () => {
                   {/* Testimonial Card */}
                   {testimonials.map((testimonials, index) => (
                     <SwiperSlide key={index}>
-                    <div className='relative flex flex-col card-shadow p-5 bg-white h-[16rem] gap-2 rounded-3xl'>
+                    <div className='relative flex flex-col card-shadow p-5 bg-white h-[14rem] gap-2 rounded-3xl'>
                         {/* Upper card */}
                         <div className='flex justify-between items-center text-left mb-2'>
                         

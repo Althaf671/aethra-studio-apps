@@ -7,6 +7,10 @@
   background: linear-gradient(to bottom, #010101, #312E2E, #010101);
 }
 
+.nav-bg {
+background: #010101;
+}
+
 .spinner-bg {
   background: #141313;
 }
@@ -87,6 +91,11 @@ html {
   background: #FF0000;
   transition: all ease-in 0.3s;
   color:white;
+}
+
+.consule-button {
+  background: #42403a ;
+  letter-spacing: 1px;
 }
 
 
