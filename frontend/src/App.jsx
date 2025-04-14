@@ -5,7 +5,7 @@ import PageContent from './components/misc/PageContent';
 
 const App = () => {
   return (
-    <div className='app-bg h-[1000px] w-screen'>
+    <div className='app-bg h-[3000px] w-screen'>
       <Router>
         <NavbarProvider>
           <PageContent />
