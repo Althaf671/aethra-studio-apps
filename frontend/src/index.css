@@ -51,10 +51,12 @@ html {
 
 
 
+
 /* Font Color */
 .price-color {
   color: #eeba2b;
 }
+
 
 
 
@@ -79,9 +81,15 @@ html {
 
 
 
+
 /* Buttons */
 .play-button:hover {
   background: #FF0000;
   transition: all ease-in 0.3s;
   color:white;
 }
+
+
+
+
+/* Border */
