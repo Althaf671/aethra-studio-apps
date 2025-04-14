@@ -1,13 +1,32 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import getImage from '../../assets/misc/assetsLoader'
 import { easeOut, motion, useInView } from 'framer-motion'
 
 
 const TopSection = () => {
     
-     // Parallax Title
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+    // Parallax Title
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
+    // Card Catalog Animation
+    const [isTapped, setIsTapped] = useState(false);  
+    const navigate = useNavigate();
+
+    const handleTap = () => {
+        if (isTapped) {
+            navigate("/service");
+            } else {
+                setIsTapped(true);
+
+                // To reset the card animation if the user didn't did the second tap
+                setTimeout(() => {
+                    setIsTapped(false)
+                }, 2000);
+        }
+    }
+
 
   return (
 
@@ -63,7 +82,7 @@ const TopSection = () => {
         <div className='grid grid-cols-2 gap-6 mt-10 text-white'>
 
             {/* Catalog Item Content Creator */}
-            <div className='relative flex flex-col border-1 px-4 py-1 border-white rounded-2xl'>
+            <div onClick={handleTap} className={`catalog-card relative flex flex-col border-1 px-4 py-1 border-white rounded-2xl ${isTapped ? "active" : ""}`}>
                 <img src={getImage('homeAssets/contentCreatorCatalog.png')} alt='content-creator' />
                 <div className='flex justify-between -mt-0.5'>
                     <div className='flex flex-col'>
@@ -75,7 +94,7 @@ const TopSection = () => {
             </div>
 
             {/* Catalog Item Web Developer */}
-            <div className='relative flex flex-col border-1 px-4 py-1 border-white rounded-2xl'>
+            <div onClick={handleTap} className={`catalog-card relative flex flex-col border-1 px-4 py-1 border-white rounded-2xl ${isTapped ? "active" : ""}`}>
                 <img src={getImage('homeAssets/webDevCatalog.png')} className='w-full' alt='web-developer' />
                 <div className='flex justify-between -mt-0.5'>
                     <div className='flex flex-col'>
@@ -87,7 +106,7 @@ const TopSection = () => {
             </div>
 
             {/* Catalog Item Graphic Designer */}
-            <div className='relative flex flex-col border-1 px-4 py-1 border-white rounded-2xl'>
+            <div onClick={handleTap} className={`catalog-card relative flex flex-col border-1 px-4 py-1 border-white rounded-2xl ${isTapped ? "active" : ""}`}>
                 <img src={getImage('homeAssets/graphicDesignCatalog.png')} alt='graphic-designer' />
                 <div className='flex justify-between -mt-0.5'>
                     <div className='flex flex-col'>
@@ -99,7 +118,7 @@ const TopSection = () => {
             </div>
 
             {/* Catalog Item Photographer */}
-            <div className='relative flex flex-col border-1 px-4 py-1 border-white rounded-2xl'>
+            <div onClick={handleTap} className={`catalog-card relative flex flex-col border-1 px-4 py-1 border-white rounded-2xl ${isTapped ? "active" : ""}`}>
                 <img src={getImage('homeAssets/photographyCatalog.png')} className='w-full' alt='photography' />
                 <div className='flex justify-between -mt-0.5'>
                     <div className='flex flex-col'>
