@@ -4,13 +4,9 @@ import tailwindcss from 'tailwindcss'
 
 export default defineConfig({
   plugins: [
-    react()
+    react(),
+    [tailwindcss()],
   ],
-  css: {
-    postcss: {
-      plugins: [tailwindcss()]
-    }
-  },
   base: '/',
   build: {
     outDir: 'dist',
