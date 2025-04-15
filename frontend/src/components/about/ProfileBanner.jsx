@@ -38,7 +38,7 @@ const ProfileBanner = () => {
         </div>
 
          {/* Company Milestone */}
-         <div className='flex items-center text-white mt-8 mb-8'>
+         <div className='container flex items-center text-white mt-8 mb-8'>
 
             {/* Tooltip while hovering */}
             <span className="relative group text-2xl cursor-pointer select-none">
