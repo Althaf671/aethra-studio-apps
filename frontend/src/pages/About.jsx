@@ -1,8 +1,11 @@
 import React from 'react'
+import ProfileBanner from '../components/about/ProfileBanner'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <ProfileBanner />
+    </div>
   )
 }
 

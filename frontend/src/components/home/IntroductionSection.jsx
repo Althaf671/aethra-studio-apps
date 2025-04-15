@@ -153,6 +153,7 @@ const IntroductionSection = () => {
         )}
       </AnimatePresence>
 
+      <p className='text-white text-14px mt-7 italic text-center'>Get in touch for a personalized consultation.</p>
     </div>
   )
 }

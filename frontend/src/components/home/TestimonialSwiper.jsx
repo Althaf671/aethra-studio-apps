@@ -48,7 +48,7 @@ const TestimonialSwiper = () => {
   const swiperRef = useRef(null);
 
   return (
-    <div className='container p-4 pt-10 md:p-6 lg:p-10'>
+    <div className='container p-8 pt-10 md:p-6 lg:p-10'>
 
     <Swiper className=''
                 effect="fade"
@@ -74,7 +74,7 @@ const TestimonialSwiper = () => {
                         
                         <div className='flex'>
                           {[...Array(5)].map((_, i) => (
-                             <img key={i} src={getImage('misc/starBlack.png')} className='w-7' alt='rate-star' />
+                             <img key={i} src={getImage('misc/starBlack.png')} className='w-6' alt='rate-star' />
                           ))}
                         </div>
                       </div>
