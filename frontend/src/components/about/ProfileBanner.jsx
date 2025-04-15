@@ -43,7 +43,7 @@ const ProfileBanner = () => {
             {/* Tooltip while hovering */}
             <span className="relative group text-2xl cursor-pointer select-none">
             <div className='flex justify-center items-center'>
-            <hr className='bg-white h-[4px] w-14' />
+            <hr className='bg-white h-[4px] w-5' />
             <p className='text-2xl flex flex-col relative'>&#9679;<p className='absolute w-12 -bottom-2.5 -left-4 text-center opacity-70 text-10px'>7 March</p></p>
             </div>
                 <div className="absolute top-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200 pointer-events-none z-10">
@@ -54,7 +54,7 @@ const ProfileBanner = () => {
             {/* Tooltip while hovering */}
             <span className="relative group text-2xl cursor-pointer select-none ">
             <div className='flex justify-center items-center'>
-            <hr className='bg-white h-[4px] w-14' />
+            <hr className='bg-white h-[4px] w-11' />
             <p className='text-2xl flex flex-col relative'>&#9679;<p className='absolute w-12 -top-2.5 -left-4 text-center opacity-70 text-10px'>14 March</p></p>
             </div>
                 <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200 pointer-events-none z-10">
@@ -65,7 +65,7 @@ const ProfileBanner = () => {
             {/* Tooltip while hovering */}
             <span className="relative group text-2xl cursor-pointer select-none">
             <div className='flex justify-center items-center'>
-            <hr className='bg-white h-[4px] w-14' />
+            <hr className='bg-white h-[4px] w-11' />
             <p className='text-2xl flex flex-col relative'>&#9679;<p className='absolute w-12 -bottom-2.5 -left-4 text-center opacity-70 text-10px'>26 March</p></p>
             </div>
                 <div className="absolute top-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200 pointer-events-none z-10">
@@ -76,7 +76,7 @@ const ProfileBanner = () => {
             {/* Tooltip while hovering */}
             <span className="relative group text-2xl cursor-pointer select-none">
             <div className='flex justify-center items-center'>
-            <hr className='bg-white h-[4px] w-14' />
+            <hr className='bg-white h-[4px] w-11' />
             <p className='text-2xl flex flex-col relative'>&#9679;<p className='absolute w-12 -top-2.5 -left-4 text-center opacity-70 text-10px'>1 April</p></p>
             </div>
                 <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200 pointer-events-none z-10">
@@ -87,11 +87,22 @@ const ProfileBanner = () => {
             {/* Tooltip while hovering */}
             <span className="relative group text-2xl cursor-pointer">
             <div className='flex justify-center items-center'>
-            <hr className='bg-white h-[4px] w-14' />
+            <hr className='bg-white h-[4px] w-11' />
             <p className='text-2xl flex flex-col relative'>&#9679;<p className='absolute w-12 -bottom-2.5 -left-4 text-center opacity-70 text-10px'>9 April</p></p>
             </div>
                 <div className="absolute top-full mb-2 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200 pointer-events-none z-10">
                     Web mengudara
+                </div>
+            </span>
+
+             {/* Tooltip while hovering */}
+            <span className="relative group text-2xl cursor-pointer">
+            <div className='flex justify-center items-center'>
+            <hr className='bg-white h-[4px] w-11' />
+            <p className='text-2xl flex flex-col relative'>&#9679;<p className='absolute w-12 -bottom-2.5 -left-4 text-center opacity-70 text-10px'>Now</p></p>
+            </div>
+                <div className="absolute bottom-full -mb-[4px] left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200 z-10">
+                    Konsul <span className='text-blue-500 underline'> <a href='https://blog.whatsapp.com' target='-blank' rel="noopener noreferrer">Sekarang</a></span>
                 </div>
             </span>
 
