@@ -7,11 +7,10 @@ import ConsuleButton from './components/misc/ConsuleButton';
 
 const App = () => {
   return (
-    <div className='app-bg relative min-h-max w-screen'>
+    <div className='app-bg relative min-h-max w-screen overflow-x-hidden'>
       <Router>
         <NavbarProvider>
           <PageContent />
-          <ConsuleButton />
           <FooterLayout />
         </NavbarProvider>
       </Router>

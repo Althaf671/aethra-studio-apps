@@ -7,10 +7,6 @@
   background: linear-gradient(to bottom, #010101, #312E2E, #010101);
 }
 
-.nav-bg {
-background: #010101;
-}
-
 .spinner-bg {
   background: #141313;
 }
@@ -82,6 +78,21 @@ html {
   box-shadow: 0 6px 20px rgba(0,0,0,0.2);
   background-color: #FFFFFF;
 }
+
+.hr-bg {
+  background: white;
+  transition: all 0.2s ease-in;
+}
+
+.gradient-text {
+  font-size: 28px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  background: linear-gradient(to left, rgb(199, 199, 199), rgb(110, 105, 105), rgb(168, 166, 166), rgb(55, 55, 55), #A76B09, #A76B09, #DDA74F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 
 

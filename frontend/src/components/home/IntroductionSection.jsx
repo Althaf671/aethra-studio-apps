@@ -51,6 +51,8 @@ const profileTeam = [
 ]
 
 const IntroductionSection = () => {
+
+    // Parallax Animation
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
@@ -58,7 +60,7 @@ const IntroductionSection = () => {
   const [currentVideo, setCurrentVideo] = useState(null)
 
   return (
-    <div className='container p-4 pt-10 md:p-6 lg:p-10'>
+    <div className='container p-4 pt-20 md:p-6 lg:p-10'>
 
       {/* Section title */}
       <motion.div
@@ -153,7 +155,6 @@ const IntroductionSection = () => {
         )}
       </AnimatePresence>
 
-      <p className='text-white text-14px mt-7 italic text-center'>Get in touch for a personalized consultation.</p>
     </div>
   )
 }

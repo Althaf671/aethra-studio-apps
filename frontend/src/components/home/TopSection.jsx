@@ -46,7 +46,7 @@ const TopSection = () => {
             auto-rotate
             camera-controls
             ar
-            style={{ width: '100%', height: '250px', touchAction: 'pan-y' }}>
+            style={{ width: '100%', height: '320px', touchAction: 'pan-y' }}>
             </model-viewer>
             <p className='text-[7px] opacity-80'> <a href='https://sketchfab.com/phil_xg'>Model by Phil_XG</a></p>
 
@@ -60,14 +60,14 @@ const TopSection = () => {
 
             {/* Small Milestone */}
             <div className='flex justify-between mt-5'>
-                <div className='flex flex-col border-1 w-[11.5rem] px-3 py-3 gap-[3px] border-white text-xs justify-center rounded-2xl'>
+                <div className='flex flex-col border-2 w-[11.5rem] px-3 py-3 gap-[3px] border-white text-xs justify-center rounded-2xl'>
                    <h2 className='text-10px opacity-70'>Years of Experience</h2>
                    <div className='flex gap-1 items-center text-14px'>
                         <img src={getImage('misc/timeWhite.svg')} className='w-6' alt='time-image' />
                         <p>0 year</p>
                    </div>
                 </div>
-                <div className='flex flex-col border-1 w-[9rem] px-3 py-3 gap-[3px] border-white text-xs justify-center rounded-2xl'>
+                <div className='flex flex-col border-2 w-[9rem] px-3 py-3 gap-[3px] border-white text-xs justify-center rounded-2xl'>
                    <h2 className='text-10px opacity-70'>Project Handled</h2>
                    <div className='flex gap-1 items-center text-14px'>
                         <img src={getImage('misc/chart.svg')} className='w-6' alt='time-image' />
@@ -80,7 +80,7 @@ const TopSection = () => {
 
         {/* Why us Section */}
          <motion.div 
-            className='flex flex-col w-full justify-center items-center mt-25 text-white'
+            className='flex flex-col w-full justify-center items-center mt-30 text-white'
             ref={ref}
             initial={{ y: 30, opacity: 0}}
             animate={ isInView ? { y: 0, opacity: 1} : {}}
