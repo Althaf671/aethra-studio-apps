@@ -37,8 +37,8 @@ const NavbarLayout = () => {
 
     const sideBarItems = [
       { label: 'My Account', to: '/login', delay: 0 },
-      { label: 'My Cart', to: '/cart', delay: 0.7 },
-      { label: 'My Project', to: '/login', delay: 0.8 },
+      { label: 'My Cart', to: '/cart', delay: 0.15 },
+      { label: 'My Project', to: '/login', delay: 0.30 },
     ];
   
 
