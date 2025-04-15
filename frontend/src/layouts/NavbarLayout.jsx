@@ -5,6 +5,7 @@ import getImage from '../assets/misc/assetsLoader';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const NavbarLayout = () => {
+
   // To control nav
   const { isNavbarVisible } = useNavbar();
   if (!isNavbarVisible) return null;
@@ -36,8 +37,8 @@ const NavbarLayout = () => {
 
   const sideBarItems = [
     { label: 'My Account', to: '/login', delay: 0 },
-    { label: 'My Cart', to: '/cart', delay: 0.9 },
-    { label: 'My Project', to: '/login', delay: 1.1 },
+    { label: 'My Cart', to: '/cart', delay: 0.5 },
+    { label: 'My Project', to: '/login', delay: 0.7 },
   ];
 
   return (
@@ -67,7 +68,7 @@ const NavbarLayout = () => {
                       type: 'spring',
                       stiffness: 300,
                       damping: 30,
-                      delay: item.delay, // Delay untuk animasi tiap item
+                      delay: item.delay, 
                     }}
                   >
                     <NavLink
