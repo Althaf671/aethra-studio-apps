@@ -16,7 +16,7 @@ const profileTeam = [
     avatar: 'homeAssets/introduction/avatar4.png',
     description: 'Lorem ipsum dolor sit amet...',
     id: '1',
-    link: 'misc/AethraLogo.jpeg',
+    link: 'homeAssets/introduction/sirhanIntro.webp',
     videoId: 'CN_MZpHkkgc' 
   },
   {
@@ -25,7 +25,7 @@ const profileTeam = [
     avatar: 'homeAssets/introduction/avatar1.png',
     description: 'Lorem ipsum dolor sit amet...',
     id: '2',
-    link: 'misc/AethraLogo.jpeg',
+    link: 'homeAssets/introduction/althafIntro.webp',
     videoId: 'CN_MZpHkkgc'
   },
   {
@@ -34,7 +34,7 @@ const profileTeam = [
     avatar: 'homeAssets/introduction/avatar2.png',
     description: 'Lorem ipsum dolor sit amet...',
     id: '2',
-    link: 'misc/AethraLogo.jpeg',
+    link: 'homeAssets/introduction/astiIntro.webp',
     videoId: 'CN_MZpHkkgc'
   },
   {
@@ -43,7 +43,7 @@ const profileTeam = [
     avatar: 'homeAssets/introduction/avatar3.png',
     description: 'Lorem ipsum dolor sit amet...',
     id: '2',
-    link: 'misc/AethraLogo.jpeg',
+    link: 'homeAssets/introduction/kaisyiIntro.webp',
     videoId: 'CN_MZpHkkgc'
   },
   
@@ -87,13 +87,13 @@ const IntroductionSection = () => {
         pagination={{ clickable: true, el: '.custom-pagination' }}
       >
         {profileTeam.map((member) => (
-          <SwiperSlide key={member.id} className='max-w-[350px]'>
-            <div className='flex w-full rounded-2xl border border-white h-[200px]'>
+          <SwiperSlide key={member.id} className='max-w-[800px]'>
+            <div className='flex w-full rounded-2xl border-2 border-white h-[200px]'>
               
               <div className="w-[67%] h-full relative">
                 <img
                   src={getImage(member.link)}
-                  className='w-full h-full object-fit rounded-tl-2xl rounded-bl-2xl'
+                  className='w-full h-full object-cover rounded-tl-2xl rounded-bl-2xl'
                   alt='intro'
                 />
                 <button

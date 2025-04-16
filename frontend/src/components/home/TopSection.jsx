@@ -32,10 +32,10 @@ const TopSection = () => {
 
   return (
 
-    <div className='p-4 pt-10 md:p-6 lg:p-10'>
+    <div className=''>
 
         {/* Top Hero Section */}
-        <div className="container mx-auto flex flex-col gap-2 text-white">
+        <div className="container mx-auto flex flex-col gap-2 text-white p-4 pt-10 md:p-6 lg:p-10">
 
             {/* 3d Model */}
             <model-viewer
@@ -79,17 +79,23 @@ const TopSection = () => {
         </div>
 
         {/* Why us Section */}
-         <motion.div 
-            className='flex flex-col w-full justify-center items-center mt-30 text-white'
+        <div className='relative'>
+        <motion.div 
+            className='flex flex-col w-full justify-center items-center mt-30 text-white p-4 pt-10 md:p-6 lg:p-10'
             ref={ref}
             initial={{ y: 30, opacity: 0}}
             animate={ isInView ? { y: 0, opacity: 1} : {}}
             transition={{ duration: 0.5, ease: easeOut}}
             >
-                <h1 className='text-3xl letterSpacing-1px'>Why Choose Us?</h1>
-                <p className='text-12px text-center'>Our field are promotional content, web development, graphic design, and photography. We deliver quality and passion in every project.
+                <h1 className='text-3xl letterSpacing-1px z-100 font-semibold mb-2'>Why Choose Us?</h1>
+                <p className='text-12px text-center z-100'>Our field are promotional content, web development, graphic design, and photography. We deliver quality and passion in every project.
                 </p>
         </motion.div>
+        <div className='relative'>
+            <img src={getImage('homeAssets/topBg.webp')} className='absolute w-full h-[280px] object-cover -bottom-20 z-10 p-0 opacity-50' />
+            <div className='absolute -bottom-25 w-full bg-black/60 h-5'></div>
+        </div>
+        </div>
 
     </div>
 

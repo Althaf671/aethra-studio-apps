@@ -48,7 +48,7 @@ const TestimonialSwiper = () => {
   const swiperRef = useRef(null);
 
   return (
-    <div className='container p-8 pt-20 md:p-6 lg:p-10'>
+    <div className='container p-8 pt-30 md:p-6 lg:p-10'>
 
     <Swiper className=''
                 effect="fade"
@@ -66,7 +66,7 @@ const TestimonialSwiper = () => {
                   {/* Testimonial Card */}
                   {testimonials.map((testimonials, index) => (
                     <SwiperSlide key={index}>
-                    <div className='relative flex flex-col card-shadow p-5 bg-white h-[14rem] gap-2 rounded-3xl'>
+                    <div className=' relative flex flex-col card-shadow p-5 bg-gray-300 h-[14rem] gap-2 border-3 border-gray-950 rounded-3xl'>
                         {/* Upper card */}
                         <div className='flex justify-between items-center text-left mb-2'>
                         
@@ -84,7 +84,7 @@ const TestimonialSwiper = () => {
                       
                       {/* Bottom card */}
                       <div className='absolute bottom-7 left-7 flex justify-baseline items-center gap-3'>
-                        <img src={getImage(testimonials.avatar)} className='w-12 h-12 rounded-full border-1 p-1' alt='customer-avatar' />
+                        <img src={getImage(testimonials.avatar)} className=' w-12 h-12 rounded-full border-1 p-1' alt='customer-avatar' />
                         <div className='flex flex-col'>
                           <p className='text-16px'>{testimonials.name}</p>
                           <p className='text-10px tracking-wide -mt-1'>Project:{testimonials.project}</p>

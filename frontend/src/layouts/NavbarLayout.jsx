@@ -38,11 +38,11 @@ const NavbarLayout = () => {
   const sideBarItems = [
     { label: 'My Account', to: '/login', delay: 0 },
     { label: 'My Cart', to: '/cart', delay: 0.5 },
-    { label: 'My Project', to: '/login', delay: 0.7 },
+    { label: '🇬🇧 | 🇮🇩', to: '/login', delay: 0.7 },
   ];
 
   return (
-    <div className="fixed top-0 z-50 h-12 flex justify-between items-center px-2.5 w-screen text-white text-lg">
+    <div className="fixed top-0 z-500 h-12 flex justify-between items-center px-2.5 w-screen text-white text-lg">
       {/* Blur Background */}
       <div className="absolute top-0 left-0 right-0 w-full h-11 backdrop-blur-md bg-black/60 bg-opacity-70"></div>
 
@@ -73,7 +73,7 @@ const NavbarLayout = () => {
                   >
                     <NavLink
                       to={item.to}
-                      className="flex justify-center w-[90px] border-2 py-1 px-2 text-[11px] bg-black border-white rounded-3xl active:bg-gray-800"
+                      className="flex justify-center w-[90px] border-2 py-1 px-2 text-[12px] bg-black border-white rounded-3xl active:bg-gray-800"
                     >
                       {item.label}
                     </NavLink>
@@ -85,19 +85,19 @@ const NavbarLayout = () => {
         </AnimatePresence>
 
         {/* Navigation Bar */}
-        <ul className="flex gap-5">
+        <ul className="poppins flex gap-5 text-[15px]">
           <NavLink className="flex flex-col items-center" to="/">
             <hr className="hr-bg w-2/3 border-none h-[10px] bg-white hidden"></hr>
-            <p>Home</p>
+            <p>HOME</p>
           </NavLink>
 
           <NavLink to="/service">
-            Service
+            <p>SERVICE</p>
             <hr className="hr-bg w-2/3 border-none h-[2px] bg-white hidden"></hr>
           </NavLink>
 
           <NavLink to="/about">
-            About
+            <p>ABOUT</p>
             <hr className="hr-bg w-2/3 border-none h-[2px] bg-white hidden"></hr>
           </NavLink>
         </ul>
