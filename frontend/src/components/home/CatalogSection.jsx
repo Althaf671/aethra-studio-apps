@@ -38,7 +38,7 @@ const CatalogSection = () => {
             initial={{ x: -120, opacity: 0 }}
             animate={isInView ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.8, ease: "easeOut" }}>
-            <h1 className='text-2xl text-white'>
+            <h1 className='text-[22px] tracking-wide text-white bg-white/5 rounded-2xl py-1.5 px-5'>
                 Our <span className='special-text rounded-xl'>Catalog</span>
             </h1>
         </motion.div>

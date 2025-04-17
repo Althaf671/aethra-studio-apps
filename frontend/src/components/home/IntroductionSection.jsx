@@ -70,7 +70,7 @@ const IntroductionSection = () => {
         animate={isInView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <h1 className='text-2xl text-white'>
+        <h1 className='text-[22px] tracking-wide text-white bg-white/5 rounded-2xl py-1.5 px-5'>
           Meet our <span className='special-text rounded-xl'>team</span>
         </h1>
       </motion.div>

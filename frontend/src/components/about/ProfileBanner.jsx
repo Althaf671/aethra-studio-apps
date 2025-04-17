@@ -10,7 +10,7 @@ const ProfileBanner = () => {
     const isInView = useInView(ref, { once: true });
 
   return (
-    <div className='container flex flex-col p-4 pb-28 pt-25 md:p-6 lg:p-10 '>
+    <div className='container flex flex-col p-4 pb-28 pt-25 md:p-6 lg:p-10 select-none'>
 
         <motion.div 
             className='flex flex-col w-full justify-center items-center mb-7 '
@@ -31,7 +31,7 @@ const ProfileBanner = () => {
 
             {/* Right Profile */}
             <div className='w-[45%] h-[170px] flex flex-col gap-1.5 items-center'>
-                <img src={getImage('misc/AethraLogo.jpeg')} className='w-[100%] h-[105px] object-cover rounded-2xl' />
+                <img src={getImage('misc/AethraLogo.jpeg')} className='w-[100%] h-[105px] object-cover p-0.5 rounded-2xl shadow-[0_1px_50px_rgba(255,255,255,0.1)]' />
                 <p className='text-10px italic opacity-70 -mt-0.5 -mb-1'>Visit Our Social Media</p>
                 <SocialMedia />
             </div>

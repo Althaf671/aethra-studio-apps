@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Metrophobic&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;600&display=swap');
 
@@ -12,9 +13,15 @@ h1, h2, h3, .poppins {
   font-weight: 600;
 }
 
+img {
+ user-select: none;
+ -webkit-user-select: none;
+ -webkit-user-drag: none;
+}
+
 /* Background */
 .app-bg {
-  background: linear-gradient(to bottom, #010101, #232121, #010101);
+  background: linear-gradient(to bottom, #010101, #211f1f, #010101);
 }
 
 .spinner-bg {
@@ -63,7 +70,7 @@ h1, h2, h3, .poppins {
 
 
 /* Font Color */
-.price-color {
+.price-color, .register-text  {
   color: #eeba2b;
 }
 
@@ -91,7 +98,11 @@ h1, h2, h3, .poppins {
 
 .hr-bg {
   background: white;
-  transition: all 0.2s ease-in;
+  transition: all ease-in 0.15s;
+}
+
+a.active .hr-bg {
+  display: block;
 }
 
 .gradient-text {
@@ -101,6 +112,13 @@ h1, h2, h3, .poppins {
   background: linear-gradient(to left, rgb(199, 199, 199), rgb(110, 105, 105), rgb(168, 166, 166), rgb(55, 55, 55), #A76B09, #A76B09, #DDA74F);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.sidebar-li-border {
+  border: 1.4px solid white;
+  border-radius: 15px;
+  padding: 5.5px 5px;
+  letter-spacing: 1px;
 }
 
 
@@ -115,6 +133,15 @@ h1, h2, h3, .poppins {
 .consule-button {
   background: #312E2E ;
   letter-spacing: 1px;
+}
+
+.login-btn {
+  transition: all ease-in 0.15s;
+}
+
+.login-btn:active {
+    background: white;
+    color: black;
 }
 
 

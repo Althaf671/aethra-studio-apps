@@ -11,7 +11,7 @@ const GoogleButton = () => {
           credential: credential,
         });
 
-        console.log(res.data); // dapet token dan user
+        console.log(res.data); 
       }}
       onError={() => {
         console.log('Login Failed');

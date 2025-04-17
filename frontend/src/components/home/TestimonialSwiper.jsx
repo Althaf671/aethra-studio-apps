@@ -48,7 +48,7 @@ const TestimonialSwiper = () => {
   const swiperRef = useRef(null);
 
   return (
-    <div className='container p-8 pt-30 md:p-6 lg:p-10'>
+    <div className='container p-8 pt-40 md:p-6 lg:p-10'>
 
     <Swiper className=''
                 effect="fade"
@@ -66,7 +66,7 @@ const TestimonialSwiper = () => {
                   {/* Testimonial Card */}
                   {testimonials.map((testimonials, index) => (
                     <SwiperSlide key={index}>
-                    <div className=' relative flex flex-col card-shadow p-5 bg-gray-300 h-[14rem] gap-2 border-3 border-gray-950 rounded-3xl'>
+                    <div className=' relative flex flex-col card-shadow p-5 bg-gray-300 min-h-60 gap-2 border-3 border-gray-950 rounded-3xl'>
                         {/* Upper card */}
                         <div className='flex justify-between items-center text-left mb-2'>
                         
@@ -83,7 +83,7 @@ const TestimonialSwiper = () => {
                       <p className='text-[15px] italic'>"{testimonials.review}"</p>
                       
                       {/* Bottom card */}
-                      <div className='absolute bottom-7 left-7 flex justify-baseline items-center gap-3'>
+                      <div className='absolute bottom-5 left-7 flex justify-baseline items-center gap-3'>
                         <img src={getImage(testimonials.avatar)} className=' w-12 h-12 rounded-full border-1 p-1' alt='customer-avatar' />
                         <div className='flex flex-col'>
                           <p className='text-16px'>{testimonials.name}</p>
@@ -97,8 +97,8 @@ const TestimonialSwiper = () => {
               </Swiper>
               {/* Navigation button*/}
               <div className='flex justify-center mt-4 gap-5'>
-                  <img src={getImage('misc/arrowBack.png')} onClick={() => swiperRef.current?.slidePrev()} className=' w-10 h-10 cursor-pointer active:opacity-75 bg-white rounded-full p-1' alt='arrow-back' />
-                  <img src={getImage('misc/arrowForward.png')} onClick={() =>  swiperRef.current?.slideNext()} className=' w-10 h-10 cursor-pointer active:opacity-75 bg-white rounded-full p-1' alt='arrow-forward' />
+                  <img src={getImage('misc/arrowBack.png')} onClick={() => swiperRef.current?.slidePrev()} className=' w-10 h-10 cursor-pointer active:opacity-75 bg-white rounded-full p-1 shadow-[0_1px_10px_rgba(255,255,255,0.2)]' alt='arrow-back' />
+                  <img src={getImage('misc/arrowForward.png')} onClick={() =>  swiperRef.current?.slideNext()} className=' w-10 h-10 cursor-pointer active:opacity-75 bg-white rounded-full p-1 shadow-[0_1px_10px_rgba(255,255,255,0.2)]' alt='arrow-forward' />
               </div>
 
     </div>
