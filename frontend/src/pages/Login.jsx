@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import { GoogleLogin } from "@react-oauth/google";
-import GoogleButton from "../components/googleButton";
+import GoogleButton from "../components/misc/GoogleButton";
 
 
 const Login = () => {
